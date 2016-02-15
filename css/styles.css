@@ -1,0 +1,765 @@
+/*fonts ---------------------------------------------------------------*/
+.c_wh{
+	color: white;
+}
+.fn_h1{
+	font-family: 'Pacifico', cursive;
+	font-size: 58px;
+	color: #0F003D;
+	display: block;
+	text-shadow: 0px 1px 0px #737373;
+}
+.fn_h2{
+	font-family: 'Source Sans Pro', normal;
+	font-weight: 400; 
+	font-size: 28px;
+	color: white;
+	display: block;
+}
+.fn_h3{
+	font-family: 'Source Sans Pro', normal;
+	font-weight: 600; 
+	font-size: 16px;
+	color: #0F003D;
+}
+.fn_b{
+	font-family: 'Source Sans Pro', normal;
+	font-weight: 400; 
+	font-size: 16px;
+	color: white;
+}
+.fn_b_l{
+	font-family: 'Source Sans Pro', normal;
+	font-weight: 400; 
+	font-size: 14px;
+	color: white;
+	text-decoration: underline;
+	
+}
+.fn_s{
+	font-family: 'Source Sans Pro';
+	font-style: italic;
+	font-weight: 400; 
+	font-size: 14px;
+	color: #0F003D;
+}
+/*containers ---------------------------------------------------------------*/
+body{
+	overflow-y: hidden;
+	background-color: #514479
+}
+.container{
+	position: absolute;
+	left: 0;
+    top: 0;
+	width: 100%;
+    height: 100%;
+}
+.panel{
+	z-index: 2;
+	position: absolute;
+	left: 0;
+    top: 0;
+	width: 100%;
+	height: 100%;
+	box-shadow: 0px 1px 0px #423938;
+}
+.panel.up{
+	animation: panel_up 2s forwards;
+}
+.panel.close{
+	animation: panel_close 2s forwards;
+}
+.panel .welcome{
+	width: 100%;
+	height: auto;
+	position: absolute;
+	top: 25%;
+	text-align: center;
+}
+.myDashboard{
+	display: none;
+}
+.input_start{
+    font-family: 'Source Sans Pro', normal;
+    font-weight: 600;
+    font-size: 16px;
+    color: #0F003D !important;
+    padding-left: 20px;
+	margin-top: 20px;
+	border-radius: 20px;
+    background-color: #755EBA;
+    border: solid 1px #755EBA;
+    width: 300px;
+    height: 30px;
+}
+.input_start::-webkit-input-placeholder {
+    color:    #514479
+}
+.input_start:-moz-placeholder {
+   color:    #514479
+   opacity:  1;
+}
+.input_start::-moz-placeholder {
+   color:    #514479
+   opacity:  1;
+}
+.input_start:-ms-input-placeholder {
+   color:    #514479
+}
+.input_start:placeholder-shown {
+  color:    #514479
+}
+.hello{
+	opacity: 0;
+}
+.hello.show{
+	animation: show_up 3s 1s forwards ease;
+}
+.head_menu{
+	display: none;
+	position: absolute;
+    width: 100%;
+    height: 45px;
+    bottom: 0;
+}
+.grid{
+	top: 15%;
+    position: absolute;
+    width: 80%;
+    left: 10%;
+    height: 600px;
+    z-index: 1;
+}
+.grid .row_2{
+	position: relative;
+	width: 100%;
+	height: 50%;
+	box-sizing: border-box;
+}
+.grid .row_2 .col_70{
+	position: relative;
+	width: 70%;
+	height: 100%;
+	float: left;
+	box-sizing: border-box;
+}
+.grid .row_2 .col_30{
+	position: relative;
+	width: 30%;
+	height: 100%;
+	float: left;
+	box-sizing: border-box;
+}
+.grid .title{
+	position: absolute;
+	top: -50px;
+	left: 7px;
+}
+/*colors ---------------------------------------------------------------*/
+.c_w{
+	color: white;
+}
+.bc_p1{
+	background-color: #755EBA;
+}
+.bc_p2{
+	background-color: #0F003D;
+}
+.bc_p3{
+	background-color: #514479;
+}
+.bc_w{
+	background-color: white;
+}
+/*tools ---------------------------------------------------------------*/
+.noselect {
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+*:focus {
+    outline: none;
+}
+.toolbox{
+	position: relative;
+	top: 100%;
+    margin-top: -44px;
+    margin-left: 10px;
+    display: block;
+    width: 35px;
+    height: 35px;
+    border: solid 2px white;
+    border-radius: 50%;
+    cursor: pointer !important;
+}
+.toolbox line{
+	position: absolute;
+	width: 23px;
+	height: 4px;
+	border-radius: 5px;
+	left: 6px;
+	background-color: white;
+}
+.toolbox line.l1{
+	top: 8px;
+}
+.toolbox line.l2{
+	top: 16px;
+}
+.toolbox line.l3{
+	top: 24px;
+}
+.fl{
+	float: left;
+}
+.w_t{
+	position: absolute;
+    left: 60px;
+    top: 10px;
+}
+.w_t_time{
+	position: absolute;
+    right: 10px;
+    top: 10px;
+}
+/*animations--------------------------------------------*/
+@keyframes panel_up{
+    0% {top: 0%;}
+    50% {top: -30%;}
+    100% {top: -94%;}
+}
+@keyframes show_up{
+    0% {opacity: 0;}
+    30% {opacity: 0.15;}
+    100% {opacity: 1;}
+}
+/*graph------------------------------------------------*/
+.graph_box{
+	position: absolute;
+    width: 96%;
+    height: 96%;
+    left: 1%;
+    top: 2%;
+    background-color: rgba(81, 68, 121, 0.49);
+    box-shadow: 0px 1px 0px #4A4646;
+    border-radius: 5px;
+}
+.graph_box .center{
+	position: relative;
+	top: 5%;
+    width: 88%;
+    height: 80%;
+    float: left;
+    box-sizing: border-box;
+    right: 0%;
+}
+.graph_box .side{
+	top: 1%;
+	position: relative;
+    width: 10%;
+    height: 80%;
+    float: left;
+    box-sizing: border-box;
+}
+.graph_box .side .box{
+    position: relative;
+    width: 100%;
+    padding-right: 10px;
+    height: 20%;
+    top: 1%;
+    float: left;
+    box-sizing: border-box;
+    text-align: right;
+}
+.graph_box .center .griding{
+	position: absolute;
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+}
+.graph_box .center .griding .box{
+	position: relative;
+	float: left;
+    width: 10%;
+    height: 20%;
+    border: solid 1px rgba(255, 255, 255, 0.14);
+    box-sizing: border-box;
+}
+.graph_box .center .griding .box-bottom{
+	position: relative;
+	float: left;
+    width: 10%;
+    height: 20%;
+    box-sizing: border-box;
+    text-align: center;
+}
+.graph_box .center .graphic{
+	position: absolute;
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+    z-index: 1;
+}
+.graph_box .center .graphic .box{
+	position: relative;
+	float: left;
+	width: 10%;
+	height: 100%;
+}
+.graph_box .center .graphic .box .collum{
+    position: absolute;
+    width: 50%;
+    left: 25%;
+    height: 0%;
+    background-color: rgba(187, 93, 93, 0.80); /* rgba(187,179,93,0.8);  rgba(156,187,93,0.8); */
+    bottom: 0;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    transition: all 1s ease;
+    cursor: pointer;
+}
+.graph_box .bottom{
+	position: absolute;
+	bottom: 0;
+    width: 100%;
+    height: 15%;
+    float: left;
+    box-sizing: border-box;
+    border: solid 1px;
+}
+.loged_users{
+	position: absolute;
+    width: 96%;
+    height: 96%;
+    left: 2%;
+    top: 2%;
+    background-color: rgba(81, 68, 121, 0.49);
+    box-shadow: 0px 1px 0px #4A4646;
+    border-radius: 5px;
+    box-sizing: border-box;
+    padding: 10px;
+    overflow-y: auto;
+}
+.loged_users .loged_users_title{
+	position: relative;
+	width: 100%;
+	text-align: left;
+	height: auto;
+	margin-bottom: 10px;
+}
+/* chat box*/
+.chat_box{
+	position: absolute;
+    width: 96%;
+    height: 96%;
+    left: 2%;
+    top: 2%;
+    background-color: rgba(81, 68, 121, 0.49);
+    box-shadow: 0px 1px 0px #4A4646;
+    border-radius: 5px;
+}
+.myself{
+	border: solid 2px hsla(255, 36%, 70%, 0.9)!important;
+    color: hsla(255, 36%, 70%, 0.9) !important;
+}
+.chat_box .chat_messages{
+	position: relative;
+	width: 90%;
+	height: 75%;
+	left: 5%;
+	top: 5%;
+	background-color: hsla(255,28%,21%,0.9);
+	box-sizing: border-box;
+	-moz-box-shadow:    inset 0 0 2px #000000;
+   -webkit-box-shadow: inset 0 0 2px #000000;
+    box-shadow:         inset 0 0 2px #000000;
+    overflow-y: auto;
+}
+
+.chat_box .controls{
+	position: relative;
+	width: 90%;
+	height: 15%;
+	left: 5%;
+	top: 5%;
+	box-sizing: border-box;
+}
+.chat_message_box{
+	position: relative;
+	width: 90%;
+	height: 15%;
+	left: 5%;
+	top: 5%;
+	box-sizing: border-box;
+}
+.chat_message_box{
+	font-family: 'Source Sans Pro', normal;
+    font-weight: 600;
+    font-size: 16px;
+    color: #0F003D !important;
+    padding-left: 20px;
+    border-radius: 3px;
+    background-color: #755EBA;
+    border: solid 1px #755EBA;
+    width: 70%;
+    margin-top: 1px;
+    height: 44px;
+    left: 0;
+    float: left;
+}
+.chat_message_box::-webkit-input-placeholder {
+    color:    #514479
+}
+.chat_message_box:-moz-placeholder {
+   color:    #514479
+   opacity:  1;
+}
+.chat_message_box::-moz-placeholder {
+   color:    #514479
+   opacity:  1;
+}
+.chat_message_box:-ms-input-placeholder {
+   color:    #514479
+}
+.chat_message_box:placeholder-shown {
+  color:    #514479
+}
+.ci{
+	float: left;
+    width: 28%;
+    height: 44px;
+    margin-left: 1%;
+    border: solid 2px hsla(255,28%,21%,0.9);
+    border-radius: 5px;
+    text-align: center;
+    padding-top: 10px;
+    cursor: pointer;
+    margin-top: 5px;
+    box-sizing: border-box;
+    transition: all 1s ease;
+}
+.ci span{
+	color: hsla(255,28%,21%,0.9)!important;
+    cursor: pointer;
+    transition: all 0.5s ease;
+}
+
+.ci:hover{
+	border: solid 2px hsla(255,28%,66%,1);
+}
+
+.ci:hover span{
+	color:hsla(255,28%,66%,1)!important
+}
+
+.msg_box{
+	background-color: hsla(255,34%,53%,1);
+    width: 94%;
+    left: 3%;
+    min-height: 50px;
+    position: relative;
+    top: 11px;
+    border-radius: 6px;
+	margin-bottom: 7px;
+}
+.msg_box .autor{
+	position: relative;
+    width: 100%;
+    height: 20px;
+    text-align: left;
+    box-sizing: border-box;
+    padding-left: 10px;
+}
+.msg_box .when{
+	position: relative;
+    width: 100%;
+    height: 20px;
+    text-align: right;
+    padding-right: 10px;
+    box-sizing: border-box;
+}
+.msg_box .content{
+    position: relative;
+    width: 100%;
+    height: auto;
+    min-height: 80px border: solid 1px;
+    text-align: left;
+    padding-left: 10px;
+    box-sizing: border-box;
+    padding-right: 5px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    color: #0F003D !important;
+    font-size: 14px !important;
+}
+.no_messages{
+	position: absolute;
+	top: 100px;
+	width: 100%;
+	height: auto;
+	text-align: center;
+}
+.title_graph{
+	position: absolute;
+	top: 10px;
+	width: 100%;
+	height: auto;
+	text-align: center;
+	z-index: 3;
+    cursor: pointer;
+}
+.title_graph span{
+	background-color: rgba(81, 68, 121, 0.71);
+    padding: 5px;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+
+.is_writing{
+    position: absolute;
+    bottom: 4px;
+    width: 100%;
+    height: auto;
+    text-align: right;
+    right: 3px;
+}
+.fs_wr{
+	font-family: 'Source Sans Pro';
+    font-style: italic;
+    font-weight: 400;
+    font-size: 14px;
+    color: #755EBA;
+}
+::-webkit-scrollbar {
+    width: 8px;
+}
+::-webkit-scrollbar-track {
+    background-color: #EAEAEA;
+    border-left: 1px solid #ccc;
+}
+::-webkit-scrollbar-thumb {
+    background-color: rgba(104, 94, 186, 0.58);
+}
+::-webkit-scrollbar-thumb:hover {
+    background-color: rgba(106,94,186,0.62);
+}
+.user_box{
+	position: relative;
+    float: left;
+    margin-left: 5px;
+    margin-top: 5px;
+    float: left;
+    padding-left: 5px;
+    padding-right: 5px;
+    width: auto;
+    height: 30px;
+    border: solid 2px hsla(255,28%,21%,0.9);
+    border-radius: 5px;
+    text-align: center;
+    padding-top: 3px;
+    box-sizing: border-box;
+    font-family: 'Source Sans Pro', normal;
+    font-weight: 600;
+    font-size: 16px;
+    color: hsla(255,28%,21%,0.9);
+}
+.error_box{
+	margin-top: -26px;
+	cursor: pointer;
+}
+.error_box.start_error{
+	animation: show_error 5s ;
+}
+@keyframes show_error{
+    0% {margin-top: -26px; opacity: 0;}
+    20% {margin-top: 7px; opacity: 1}
+    80% {margin-top: 7px; opacity: 1}
+    100% {margin-top: -26px; opacity: 0;}
+}
+.toolbox_o{
+	min-width: 100px;
+	width: auto;
+	height: auto;
+	position: absolute;
+	top: 0;
+	animation: show_error 5s;
+	opacity: 0;
+	display: none;
+}
+.toolbox_show{
+	display: block;
+	animation: tb_show 0.3s ease forwards;
+}
+.toolbox_hide{
+	display: block;
+	animation: tb_hide 0.3s ease forwards;
+}
+@keyframes tb_show{
+    0% {top: 0px; opacity: 0;}
+    100% {top: 52px; opacity: 1;}
+}
+@keyframes tb_hide{
+    0% {top: 52px; opacity: 1;}
+    100% {top: 0px; opacity: 0; display: none;}
+}
+@keyframes panel_close{
+    0% {top: -94%;}
+    50% {top: -80%;}
+    100% {top: 0%;}
+}
+.tip{
+	width: 86px;
+    min-height: 28px;
+    height: auto;
+    background-color: hsla(255,28%,21%,1);
+    box-sizing: border-box;
+    padding-top: 3px;
+    text-align: center;
+    -moz-box-shadow: inset 0 0 2px #000000;
+    -webkit-box-shadow: inset 0 0 2px #000000;
+    box-shadow: 0 0 1px #000000;
+    border-radius: 21px;
+    position: fixed;
+    cursor: pointer;
+    top: 0px;
+    left: 0px;
+    z-index: 4;
+}
+/*modal*/
+.modal{
+	width: 100%;
+    height: 100%;
+    position: fixed;
+    z-index: 3;
+    top: 0;
+    left: 0;
+    display: none;
+}
+.modal .overlay{
+	position: absolute;
+	width: 100%;
+    height: 100%;
+    background-color: rgba(234,234,234,0.5);
+}
+.modal .mbox{
+    position: absolute;
+    width: 400px;
+    height: 300px;
+    background-color: #514479;
+    left: 50%;
+    margin-left: -200px;
+    top: 150px;
+    border-radius: 10px;
+    box-shadow: 0px 1px 0px #1F1616;
+    box-sizing: border-box;
+    padding: 20px;
+}
+ibox{
+	position: absolute;
+    width: 22px;
+    height: 22px;
+    border: solid 1px white;
+    box-sizing: border-box;
+    border-radius: 50%;
+    z-index: 3;
+    font-family: 'Source Sans Pro', normal;
+    font-weight: 600;
+    font-size: 16px;
+    color: white;
+    cursor: pointer;
+    padding-left: 8px;
+}
+.ib1{
+	position: absolute;
+    right: 56px;
+    top: 13px;
+}
+.ib2{
+	position: absolute;
+    right: 39px;
+    top: 15px;
+}
+.ib3{
+	position: absolute;
+    right: 39px;
+    top: 15px;
+}
+.ib4{
+	position: absolute;
+    right: 39px;
+    top: 15px;
+}
+.ib0{
+	position: absolute;
+    right: 28px;
+    top: 5px;
+}
+.ib0 ibox{
+	width: 24px;
+    height: 24px;
+    padding-left: 7px;
+}
+.mbox_title{
+	position: relative;
+	width: 100%;
+	height: auto;
+	margin-bottom: 10px;
+}
+.mbox_content{
+	position: relative;
+	width: 100%;
+	height: auto;
+	margin-bottom: 10px;
+}
+.fn_h1s{
+	font-family: 'Pacifico', cursive;
+    font-size: 27px;
+    color: #0F003D;
+    display: block;
+    text-shadow: 0px 1px 0px #737373;
+}
+
+@media only screen and (max-width: 1175px) {
+	.col_70{
+        width: 100% !important;
+	}
+/*	span.fn_h2.title{
+		font-size: 28px;
+	}*/
+	.col_30{
+        width: 50% !important;
+	}
+}
+
+@media only screen and (max-width: 980px) {
+	.col_70{
+        width: 100% !important;
+	}
+/*	span.fn_h2.title{
+		font-size: 28px;
+	}*/
+	.col_30{
+        width: 100% !important;
+	}
+	.input_start{
+		font-family: 'Source Sans Pro', normal;
+	    font-weight: 600;
+	    font-size: 29px;
+	    color: #0F003D !important;
+	    padding-left: 20px;
+	    margin-top: 20px;
+	    border-radius: 28px;
+	    background-color: #755EBA;
+	    border: solid 1px #755EBA;
+	    width: 500px;
+	    height: 60px;
+	}
+	.fn_h1{
+		font-size: 67px;
+	}
+}

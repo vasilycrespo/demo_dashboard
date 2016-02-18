@@ -1,12 +1,12 @@
-# demo_dashboard
+# Sample dashboard
 This demo includes a real time chat application managed by a dashboard, with a few tools like graphs for plotting on real time, message box, socket communication, and more. For portability reasons, the back end (restapi) is made on a node server as well as the front end service. It uses an emulated database for showing purposes, all data is stored in JSON files. 
 
 ### Tech used
-* Node JS
+* NodeJS
 * Express
-* Angular JS 
+* AngularJS 
 * Jquery
-* Socket Io
+* SocketIo
 * Html5
 * Css3
 * Json

@@ -10,7 +10,7 @@ This demo includes a real time chat application managed by a dashboard, with a f
 * Html5
 * Css3
 * Json
-* 
+
 # Intallation
 
 ### pre-requisites

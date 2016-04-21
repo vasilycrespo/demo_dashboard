@@ -63,7 +63,7 @@ This will install all software & libraries required to make this project up and 
 $ node server.js
 ```
 
-If everithing is ok you should get the followiung feedback on the terminal:
+If everithing is ok you should get the following feedback on the terminal:
 
 ```sh
 $ frontend on port: 8080
@@ -71,11 +71,11 @@ $ restAPI started on port: 3030
 $ Socket io listening at port 3000
 ```
 
-You can use any web browser located on your local system to acces the app using the following adde
+You can use any web browser located on your local system to acces the app using the following address
 
 [http://localhost:8080/]
 
-That should be all, now server must be up and running!
+That should be all, now the server must be up and running!
 
 
 [Node js]: <https://nodejs.org/>
